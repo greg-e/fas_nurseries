@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkfasweb=self.webpackChunkfasweb||[]).push([[277],{8234:function(e,t,l){l.r(t);var a=l(7294),n=l(3656);t.default=function(){return a.createElement(n.Z,{fullMenu:!0},a.createElement("article",{id:"main"},a.createElement("header",null,a.createElement("h2",null,"You have successfully registered for our email updates."),a.createElement("p",null,a.createElement("a",{href:"/",className:"button"},"Home")))))}}}]);
+//# sourceMappingURL=component---src-pages-sent-js-5337ed7d6584ccf3e6ec.js.map
