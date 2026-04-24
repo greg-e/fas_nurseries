@@ -11,14 +11,23 @@
   });
   // Menu toggle
   document.addEventListener('DOMContentLoaded', function() {
-    var body = document.querySelector('.landing.main-body') || document.querySelector('.main-body') || document.body;
+    var body = document.body;
+    var pageRoot = document.querySelector('.landing.main-body') || document.querySelector('.main-body');
+    var menu = document.getElementById('menu');
+    if (menu && menu.parentElement !== body) {
+      body.appendChild(menu);
+    }
+    body.classList.remove('is-menu-visible');
+    if (pageRoot) { pageRoot.classList.remove('is-menu-visible'); }
     document.addEventListener('click', function(e) {
       if (e.target.closest && e.target.closest('.menuToggle')) {
         e.preventDefault();
         body.classList.add('is-menu-visible');
+        if (pageRoot) { pageRoot.classList.add('is-menu-visible'); }
       } else if (e.target.closest && (e.target.closest('#menu .close') || (!e.target.closest('#menu') && body.classList.contains('is-menu-visible')))) {
         e.preventDefault();
         body.classList.remove('is-menu-visible');
+        if (pageRoot) { pageRoot.classList.remove('is-menu-visible'); }
       }
     });
   });
