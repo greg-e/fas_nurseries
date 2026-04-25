@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkfasweb=self.webpackChunkfasweb||[]).push([[277],{8234:function(e,t,a){a.r(t);var l=a(7294),n=a(3656);t.default=function(){return l.createElement(n.Z,{fullMenu:!0},l.createElement("article",{id:"main"},l.createElement("header",null,l.createElement("h2",null,"You have successfully registered for our email updates."),l.createElement("p",null,l.createElement("a",{href:"/growing",className:"button"},"What we're growing")))))}}}]);
-//# sourceMappingURL=component---src-pages-sent-js-46eba44910c9cfe21d70.js.map
