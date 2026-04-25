@@ -141,13 +141,9 @@ Images and styles will load correctly (unlike opening `index.html` directly).
 
 ---
 
-## Infrastructure Notes
+## Why GitHub Pages?
 
-Currently **GitHub Pages** serves the site from the `docs/` folder. No CDN, no serverless, no database — just static HTML.
-
-### Future: Azure Static Web Apps
-
-The `README.md` previously included Azure Static Web Apps migration steps (deleted in April 2026). If you want to migrate away from GitHub Pages to Azure SWA for better CDN, custom headers, or serverless API support, contact the project maintainer for the archived infrastructure docs.
+Simple, free, and built into GitHub. No separate hosting, CDN, or CI/CD to manage. Perfect for a static site like this.
 
 ---
 
