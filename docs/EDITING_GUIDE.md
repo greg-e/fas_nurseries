@@ -132,33 +132,32 @@ Update the `action="..."` attribute in both:
 ### Current Domain
 
 **Domain:** `fasnurseries.com`  
-**Registrant:** (Check your domain registrar for domain registration details)  
-**Where it's configured:** `docs/CNAME` (GitHub Pages custom domain config)
+**Where it's managed:** Microsoft 365 Admin Portal  
+**GitHub Pages config:** `docs/CNAME` file (keep as-is)
 
 ### DNS Zone Management
 
-**Location:** Azure DNS (resource group `fasweb_group`)  
-**Zone name:** `fasnurseries.com`
+**Location:** [Microsoft 365 Admin Portal](https://admin.microsoft.com) (not Azure)
+
+**To manage DNS records:**
+
+1. Log in to [Microsoft 365 Admin Portal](https://admin.microsoft.com) with your Microsoft 365 admin account
+2. Navigate to **Settings** → **Domains** (or search for "Domains")
+3. Select `fasnurseries.com` from the list
+4. Click **DNS Records** to view and edit current records
+5. Update as needed (e.g., add new records, change targets, etc.)
 
 **Current DNS records** (as of April 2026):
 
 | Record | Type | Target | Purpose |
 |--------|------|--------|---------|
-| @ (root) | A (or ALIAS) | GitHub Pages IP | Root domain resolution |
-| www | CNAME | GitHub Pages hostname | www subdomain |
+| @ (root) | A or CNAME | Points to GitHub Pages | Root domain resolution |
+| www | CNAME | Points to GitHub Pages | www subdomain |
 
-**To manage DNS:**
-
-1. Log in to [Azure Portal](https://portal.azure.com)
-2. Navigate to **Resource Groups** → `fasweb_group`
-3. Find the **DNS Zone** named `fasnurseries.com`
-4. Click to open the zone
-5. View/edit records as needed
-
-**Why Azure DNS?**
-- Domain name system (DNS) is separate from web hosting
-- This allows you to keep the domain pointing to GitHub Pages while keeping DNS records in Azure
-- If you ever need to point the domain elsewhere (new host, subdomain for email, etc.), update DNS records here
+**Common DNS changes:**
+- **Email/MX records** — managed in Microsoft 365 (for Microsoft 365 email service)
+- **Domain verification** — TXT records in Microsoft 365
+- **Web hosting target** — A or CNAME record pointing to GitHub Pages (in Microsoft 365)
 
 ### CNAME File
 
