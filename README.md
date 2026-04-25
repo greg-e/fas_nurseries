@@ -1,5 +1,11 @@
 # FAS Nurseries - Azure Static Web Apps
 
+## Current Editing Note
+
+- Live GitHub Pages output is currently served from [docs/](docs/).
+- The [$web/](%24web/) folder is abandoned.
+- For practical content updates (address, page copy, contact text), use [docs/EDITING_GUIDE.md](docs/EDITING_GUIDE.md).
+
 This repo hosts the **fasnurseries.com** static website using **Azure Static Web Apps (SWA)**.
 
 ## Current Azure Resources (as at April 2026)
