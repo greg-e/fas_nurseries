@@ -1,161 +1,28 @@
-# Frank A. Smith Nurseries Website
+# Frank A. Smith Nurseries
 
-Live site: **[fasnurseries.com](https://fasnurseries.com)**
+Website for Frank A. Smith Nurseries — a wholesale nursery in Marietta, GA specializing in perennials, hostas, ferns, and ornamental grasses.
 
----
-
-## Quick Start — Editing Content
-
-**For non-technical edits** (address, phone, plant names, descriptions):
-- See [docs/EDITING_GUIDE.md](docs/EDITING_GUIDE.md)
-
-**For technical setup or infrastructure questions**, scroll to the sections below.
+**Live site:** [fasnurseries.com](https://fasnurseries.com)
 
 ---
 
-## What's in This Repo
+## About
 
-| Folder | Purpose |
-|--------|---------|
-| `docs/` | **Live website root** — all HTML, CSS, images, and assets. Changes here go live automatically. |
-| `.git/` | Git version control |
+Frank A. Smith Nurseries has been growing quality plants for landscapers and retailers in the Atlanta area for decades. This repository hosts the public website, served via GitHub Pages.
 
-That's it. The site is a simple static HTML deployment using GitHub Pages.
+## Pages
 
----
+| Page | URL |
+|------|-----|
+| Home | [fasnurseries.com](https://fasnurseries.com) |
+| Plant Availability | [fasnurseries.com/growing](https://fasnurseries.com/growing) |
+| Email Sign-Up | [fasnurseries.com/register](https://fasnurseries.com/register) |
 
-## How It Works
+## Contact
 
-1. **Edit files** in `docs/` (HTML pages, contact info, plant inventory, etc.)
-2. **Commit and push** to `main` branch
-3. **Site updates** automatically within 1–2 minutes via GitHub Pages
+**Frank A. Smith Nurseries**  
+1310 Austell Road SE  
+Marietta, GA 30008  
+(770) 454-7994
 
-No build step. No CI/CD pipeline. No framework. Plain HTML + CSS + inline JavaScript.
-
----
-
-## Site Structure
-
-```
-docs/
-├── index.html                         ← Home page
-├── growing/index.html                 ← Plant availability
-├── register/index.html                ← Sign-up form
-├── sent/index.html                    ← Sign-up confirmation
-├── 404.html & 404/index.html          ← Error pages
-├── styles.6d2842a8ac114ab1800e.css   ← Main stylesheet
-├── favicon-32x32.png
-├── icons/                             ← Apple touch icons
-├── static/                            ← Images & Font Awesome
-│   ├── banner-*.jpg
-│   ├── jr-*.jpg, darren-emerick-*.jpg (team photos)
-│   ├── plant photos (*.jpg)
-│   └── font files (fa-*.ttf, fa-*.woff2, etc.)
-├── CNAME                              ← Custom domain config
-├── .nojekyll                          ← Disables Jekyll processing
-└── EDITING_GUIDE.md                   ← Content editing instructions
-```
-
----
-
-## Deployment
-
-**Automatic:** Push to `main` → site updates in 1–2 minutes.
-
-```bash
-# Make changes to docs/
-git add docs/
-git commit -m "Update plant availability"
-git push origin main
-```
-
-**Custom domain:** `fasnurseries.com` is configured in `docs/CNAME` and DNS.
-
----
-
-## Editing Workflow
-
-### Simple Edits (Address, Contact, Plant Names)
-
-Use Find & Replace (Ctrl+H) in your editor:
-
-1. Open `docs/index.html`, `docs/growing/index.html`, etc.
-2. Search for the text to change (e.g., `(770) 454-7994`)
-3. Replace it
-4. Commit and push
-
-**Note:** HTML files are minified (one long line) — copy the exact text from the source and replace it exactly.
-
-### Adding/Removing Plants
-
-See [docs/EDITING_GUIDE.md — Plant Availability Page](docs/EDITING_GUIDE.md#plant-availability-page-docsgrowingindexhtml)
-
-### Replacing Images
-
-1. Add new image to `docs/static/`
-2. Update the `src` or `url()` reference in the corresponding HTML or CSS file
-3. Old images can stay (they don't hurt) or be deleted
-
----
-
-## Key Details
-
-| Item | Value | Edit Location |
-|------|-------|---------------|
-| Address | 1310 Austell Road SE, Marietta, GA 30008 | All 6 HTML files (footer) |
-| Main phone | (770) 454-7994 | All 6 HTML files (footer) |
-| JR's cell | (770) 352-4407 | `docs/index.html` only |
-| Darren's cell | (770) 530-5078 | `docs/index.html` only |
-| Email signup URL | Azure Logic Apps endpoint | `docs/index.html` & `docs/register/index.html` |
-| Custom domain | `fasnurseries.com` | `docs/CNAME` |
-
-**Important:** Contact details are hardcoded in each HTML file individually — there's no template. If phone/address changes, update all 6 pages.
-
----
-
-## Local Testing
-
-Serve the site locally to preview changes before pushing:
-
-```bash
-# Python 3
-cd docs
-python -m http.server 8080
-
-# Open http://localhost:8080 in your browser
-```
-
-Images and styles will load correctly (unlike opening `index.html` directly).
-
----
-
-## File Maintenance
-
-**These files should NOT be edited by hand:**
-- JavaScript that's minified into HTML
-- Font/image hashes in filenames (these are content-based and auto-managed)
-
-**Safe to ignore:**
-- Old image files in `docs/static/` (if unused, they don't cause problems)
-- The `.git/` folder
-
----
-
-## Why GitHub Pages?
-
-Simple, free, and built into GitHub. No separate hosting, CDN, or CI/CD to manage. Perfect for a static site like this.
-
----
-
-## Browser Compatibility
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile-responsive design
-- Inline JS for menu toggle (no jQuery, no external framework)
-
----
-
-## Support
-
-For content/editing questions: See [docs/EDITING_GUIDE.md](docs/EDITING_GUIDE.md)  
 For technical/infrastructure issues: Open an issue on GitHub or contact the maintainer.
