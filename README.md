@@ -10,6 +10,8 @@ Website for Frank A. Smith Nurseries — a wholesale nursery in Marietta, GA spe
 
 Frank A. Smith Nurseries has been growing quality plants for landscapers and retailers in the Atlanta area for decades. This repository hosts the public website, served via GitHub Pages.
 
+For editing, publishing, and deployment workflow instructions, see [docs/EDITING_GUIDE.md](docs/EDITING_GUIDE.md).
+
 ## Pages
 
 | Page | URL |
